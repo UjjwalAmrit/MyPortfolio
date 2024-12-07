@@ -10,7 +10,7 @@ const PORT = 8080;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "../public"))); // Serve static files
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "../views"));
 
 // MySQL connection
 const db = mysql.createConnection({
