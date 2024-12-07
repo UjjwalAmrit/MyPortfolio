@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static('css')); 
-app.use(express.static(path.join(__dirname, 'Backend', 'public')));
+app.use(express.static(path.join(__dirname,  'public')));
 
 
 // MySQL connection
@@ -113,7 +113,7 @@ app.post("/contact", (req, res) => {
 
 // Home page route
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../index.html"));
+    res.sendFile(path.join(__dirname, "./index.html"));
 });
 
 // Feedback form route
